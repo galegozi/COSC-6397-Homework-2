@@ -15,7 +15,6 @@ public class SwitchScript : MonoBehaviour
         var comp = GetComponentsInChildren(typeof(Transform));
         foreach(var c in comp)
         {
-            Debug.Log(c.gameObject.name);
             if(c.gameObject.name == "DownloadedBanana")
             {
                 downloaded = c.gameObject;
