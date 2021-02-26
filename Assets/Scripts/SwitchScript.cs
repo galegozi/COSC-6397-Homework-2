@@ -18,30 +18,32 @@ public class SwitchScript : MonoBehaviour
             {
                 downloaded = c.gameObject;
                 downloaded.SetActive(false);
-                Animation anim = downloaded.GetComponent<Animation>();
-                if(anim != null)
-                {
-                    anim.Play();
-                }
+                downloaded.transform.localScale = new Vector3(10, 10, 10);
+                //Animation anim = downloaded.GetComponent<Animation>();
+                //if(anim != null)
+                //{
+                //    anim.Play();
+                //}
             }
             else if(c.gameObject.name == "GalIce")
             {
                 galIce = c.gameObject;
-                Animation anim = galIce.GetComponent<Animation>();
-                if (anim != null)
-                {
-                    Debug.Log("Animation Found!");
-                    Debug.Log(anim.Play());
-                }
-                else
-                {
-                    Debug.Log("No Animation Found!");
-                }
+                //Animation anim = galIce.GetComponent<Animation>();
+                //if (anim != null)
+                //{
+                //    Debug.Log("Animation Found!");
+                //    Debug.Log(anim.Play());
+                //}
+                //else
+                //{
+                //    Debug.Log("No Animation Found!");
+                //}
             }
         }
     }
     void FixedUpdate()
     {
+        downloaded.transform.localScale = new Vector3(10, 10, 10);
     }
     // Update is called once per frame
     void Update()
