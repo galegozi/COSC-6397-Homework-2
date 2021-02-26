@@ -8,7 +8,6 @@ public class SwitchScript : MonoBehaviour
     private GameObject downloaded;
     private GameObject galIce;
     private bool gal = true;
-    //public UnityEngine.GameObject galObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +18,25 @@ public class SwitchScript : MonoBehaviour
             {
                 downloaded = c.gameObject;
                 downloaded.SetActive(false);
+                Animation anim = downloaded.GetComponent<Animation>();
+                if(anim != null)
+                {
+                    anim.Play();
+                }
             }
             else if(c.gameObject.name == "GalIce")
             {
                 galIce = c.gameObject;
+                Animation anim = galIce.GetComponent<Animation>();
+                if (anim != null)
+                {
+                    Debug.Log("Animation Found!");
+                    Debug.Log(anim.Play());
+                }
+                else
+                {
+                    Debug.Log("No Animation Found!");
+                }
             }
         }
     }
